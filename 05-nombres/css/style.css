@@ -50,13 +50,25 @@ img {
 .contenedor-media {
     margin: 0 auto;
     max-width: 800px;
+    display: grid;
+    grid-template-areas: "titulo titulo titulo titulo" "imagen desc desc desc";
+    gap: 1rem;
+    grid-template-columns: 33.3% 66.6%;
 }
 
-.titulo {}
+.titulo {
+    grid-area: titulo;
+}
+
+.imagen {
+    grid-area: imagen;
+}
+
+.descripcion {
+    grid-area: desc;
+}
 
 .slogan {}
-
-.imagen {}
 
 .info {}
 
