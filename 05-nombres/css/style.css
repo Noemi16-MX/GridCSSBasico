@@ -51,9 +51,13 @@ img {
     margin: 0 auto;
     max-width: 800px;
     display: grid;
-    grid-template-areas: "titulo titulo titulo titulo" "imagen desc desc desc";
-    gap: 1rem;
-    grid-template-columns: 33.3% 66.6%;
+    grid-template-areas: "titulo" "slogan" "info" "imagen" "entrada"
+}
+
+@media screen and (min-width:768px) {
+    .contenedor-media {
+        grid-template-areas: "titulo titulo" "imagen slogan" "imagen info" "entrada entrada";
+    }
 }
 
 .titulo {
@@ -64,12 +68,14 @@ img {
     grid-area: imagen;
 }
 
-.descripcion {
-    grid-area: desc;
+.slogan {
+    grid-area: slogan;
 }
 
-.slogan {}
+.info {
+    grid-area: info;
+}
 
-.info {}
-
-.entrada {}
+.entrada {
+    grid-area: entrada;
+}
